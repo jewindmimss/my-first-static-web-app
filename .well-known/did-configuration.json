@@ -1,0 +1,48 @@
+{
+  "id": "did:web:mssecuritysolutions.com",
+  "@context": [
+    "https://www.w3.org/ns/did/v1",
+    {
+      "@base": "did:web:mssecuritysolutions.com"
+    }
+  ],
+  "service": [
+    {
+      "id": "#linkeddomains",
+      "type": "LinkedDomains",
+      "serviceEndpoint": {
+        "origins": [
+          "https://mssecuritysolutions.com/"
+        ]
+      }
+    },
+    {
+      "id": "#hub",
+      "type": "IdentityHub",
+      "serviceEndpoint": {
+        "instances": [
+          "https://hub.did.msidentity.com/v1.0/bd59bfc9-8808-43f5-8d51-50db312e8e0d"
+        ]
+      }
+    }
+  ],
+  "verificationMethod": [
+    {
+      "id": "#772d4a9da32341ba82745d0b0d5cb7e3vcSigningKey-2ad00",
+      "controller": "did:web:mssecuritysolutions.com",
+      "type": "EcdsaSecp256k1VerificationKey2019",
+      "publicKeyJwk": {
+        "crv": "secp256k1",
+        "kty": "EC",
+        "x": "935gVLi-Yxfr5TV1aoLc4j4Q3lu6JYlJLK1QIoc2ZWE",
+        "y": "mJwAqHvCQI9kO2Mxc0caP4LorbpbIpEU_TmpxVq3HKg"
+      }
+    }
+  ],
+  "authentication": [
+    "#772d4a9da32341ba82745d0b0d5cb7e3vcSigningKey-2ad00"
+  ],
+  "assertionMethod": [
+    "#772d4a9da32341ba82745d0b0d5cb7e3vcSigningKey-2ad00"
+  ]
+}
